@@ -66,6 +66,7 @@ public class step2 {
             		 continue;
             	}
             	showcube();
+            }
     	}
         
     }
@@ -171,5 +172,13 @@ public class step2 {
         System.out.println("\nBye~");
         System.exit(0);
 	}
+	
+	public static void putcopy(char[][] copy){ 
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j ++){
+                cube[i][j] = copy[i][j];
+            }
+        }
+    }
  
 } 

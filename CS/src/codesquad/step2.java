@@ -101,5 +101,75 @@ public class step2 {
         return inputList;
 		
 	}
+    
+    public static void U(char[][] copy){
+        System.out.println("\nU");
+        copy[0][2] = cube[0][0];
+        copy[0][0] = cube[0][1];
+        copy[0][1] = cube[0][2];
+        putcopy(copy); 
+    }
+
+    public static void notU(char[][] copy){ 
+        System.out.println("\nU'");
+        copy[0][1] = cube[0][0];
+        copy[0][2] = cube[0][1];
+        copy[0][0] = cube[0][2];
+        putcopy(copy);
+    }
+
+    public static void R(char[][] copy){ 
+        System.out.println("\nR");
+        copy[0][2] = cube[1][2];
+        copy[1][2] = cube[2][2];
+        copy[2][2] = cube[0][2];
+        putcopy(copy); 
+    }
+
+    public static void notR(char[][] copy){ 
+        System.out.println("\nR'");
+        copy[1][2] = cube[0][2];
+        copy[2][2] = cube[1][2];
+        copy[0][2] = cube[2][2];
+        putcopy(copy); 
+    }
+
+    public static void L(char[][] copy){
+        System.out.println("\nL");
+        copy[1][0] = cube[0][0];
+        copy[2][0] = cube[1][0];
+        copy[0][0] = cube[2][0];
+        putcopy(copy); 
+    }
+
+    public static void notL(char[][] copy){ 
+        System.out.println("\nL'");
+        copy[0][0] = cube[1][0];
+        copy[1][0] = cube[2][0];
+        copy[2][0] = cube[0][0];
+        putcopy(copy); 
+    }
+
+    public static void B(char[][] copy){
+        System.out.println("\nB");
+        copy[2][1] = cube[2][0];
+        copy[2][2] = cube[2][1];
+        copy[2][0] = cube[2][2];
+        putcopy(copy); 
+    }
+
+    public static void notB(char[][] copy){
+        System.out.println("\nB'");
+        copy[2][0] = cube[2][1];
+        copy[2][1] = cube[2][2];
+        copy[2][2] = cube[2][0];
+        putcopy(copy); 
+    }
+    
+	private static void Q(char[][] cube2) {
+		scanner.close();
+        System.out.println("\nBye~");
+        System.exit(0);
+	}
  
 } 

@@ -24,6 +24,48 @@ public class step2 {
     		for(String item : list) {
     		    array[size++] = item;
     		}
+    		
+            for(int i=0; i<array.length;i++) {
+            	if(array[i].equals("U")) {
+                    U(cube);
+              
+            	}
+            	else if(array[i].equals("U'")) {
+            		notU(cube);
+                
+            	}
+            	else if(array[i].equals("R")) {
+            		R(cube);
+            
+            	}
+            	else if(array[i].equals("R'")) {
+            		notR(cube);
+         
+            	}
+            	else if(array[i].equals("L")) {
+            		L(cube);
+
+            	}
+            	else if(array[i].equals("L'")) {
+            		notL(cube);
+                    break;
+            	}
+            	else if(array[i].equals("B")) {
+            		B(cube);
+
+            	}
+            	else if(array[i].equals("B'")) {
+            		notB(cube);
+            	}
+            	else if(array[i].equals("Q")) {
+            		Q(cube);
+                    break;
+            	}
+            	else {
+            		 System.out.println("잘못 된 입력입니다.\n");
+            		 continue;
+            	}
+            	showcube();
     	}
         
     }

@@ -14,6 +14,18 @@ public class step2 {
 		cube[0] = new char[]{'R', 'R', 'W'};
         cube[1] = new char[]{'G', 'C', 'W'};
         cube[2] = new char[]{'G', 'B', 'B'};
+        
+        showcube();
+        
     }
+    
+    private static void showcube() {    
+    	for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(cube[i][j] + " ");
+            }
+            System.out.println();
+        }
+	}
  
 } 

@@ -19,6 +19,11 @@ public class step2 {
         
         while(true) {
     		list=getinput();
+    		String[] array = new String[list.size()];
+    		int size = 0;
+    		for(String item : list) {
+    		    array[size++] = item;
+    		}
     	}
         
     }
@@ -48,6 +53,7 @@ public class step2 {
             String details = inst_arr[i];
             if (!details.equals("'")) { 
                 inputList.add(details);
+                
             }
         }
         return inputList;

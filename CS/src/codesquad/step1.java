@@ -27,6 +27,43 @@ public class step1 {
 			for(int i=0;i<len; i++) {
 				w_arr[i]=Character.toString(word.charAt(i));
 			}
+			
+			word="";
+			
+			if (LR=='R' || LR=='r') {
+				if(num>=0) {
+					for(int i=0;i<len;i++) {
+						result[(i+num)%len]=w_arr[i];
+					}	
+				}
+				else {
+					for(int i=0;i<len;i++) {
+						result[(i+len+num%len)%len]=w_arr[i];
+					}
+				}
+			}
+			else if (LR=='L' || LR=='l') {
+				if(num>=0) {
+					for(int i=0;i<len;i++) {
+						result[(i+len-num%len)%len]=w_arr[i];
+					}	
+				}
+				else {
+					for(int i=0;i<len;i++) {
+						result[(i-num)%len]=w_arr[i];
+					}
+				}
+			}
+			else {
+				flag=false;
+			}
+			
+			for(int i=0;i<len; i++) {
+				word+=result[i];
+			}
+			
+			System.out.println(word);
+			
 		}
 
 	}

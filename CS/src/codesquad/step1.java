@@ -16,6 +16,18 @@ public class step1 {
 		int len;
 		String result[];
 		
-		
+		while(flag==true) {
+			word=scanner.next();
+			num=scanner.nextInt();
+			LR=scanner.next().charAt(0);	
+			w_arr=new String[word.length()];
+			result=new String[word.length()];
+			len=w_arr.length;
+			
+			for(int i=0;i<len; i++) {
+				w_arr[i]=Character.toString(word.charAt(i));
+			}
+		}
+
 	}
 }

@@ -17,6 +17,10 @@ public class step2 {
         
         showcube();
         
+        while(true) {
+    		list=getinput();
+    	}
+        
     }
     
     private static void showcube() {    
@@ -26,6 +30,28 @@ public class step2 {
             }
             System.out.println();
         }
+	}
+    
+    private static List<String> getinput() {
+		System.out.print("CUBE > ");
+        String input = scanner.nextLine();
+        
+        String[] inst_arr = input.split("");
+        ArrayList<String> inputList = new ArrayList<>(); 
+        for (int i = 0; i < inst_arr.length; i++) {
+            String details = inst_arr[i];
+            if (details.equals("'")) {
+                inst_arr[i - 1] = inst_arr[i - 1] + "'"; 
+            }
+        }
+        for (int i = 0; i < inst_arr.length; i++) {
+            String details = inst_arr[i];
+            if (!details.equals("'")) { 
+                inputList.add(details);
+            }
+        }
+        return inputList;
+		
 	}
  
 } 
